@@ -10,13 +10,16 @@ import { createBrowserRouter, Link, RouterProvider, Route, createRoutesFromEleme
 import { Home } from './containers/Home';
 import { NewsList } from './containers/NewsList';
 import { NewsDetail } from './containers/NewsDetail';
+import { Login } from  './containers/Login'
+import { Register } from  './containers/Register'
 
 const router = createBrowserRouter(createRoutesFromElements(
   <Route path='/' element={<App />}>
     <Route path='/' element={<Home />} />
-    <Route path='/news' element={<NewsList />}>
-      <Route path='/news/detail' element={<NewsDetail />} />
-    </Route>
+    <Route path='/login' element={<Login />} />
+    <Route path='/register' element={<Register />} />
+    <Route path='/news' element={<NewsList />}/>
+    <Route path='/news/:newsId' element={<NewsDetail />} />
     <Route path='*' element={
       <Box sx={{
         display: 'flex',

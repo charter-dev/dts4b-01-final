@@ -4,7 +4,7 @@ import { Card, CardContent, Typography, CardMedia, Paper, Button } from '@mui/ma
 
 export const NewsHeroCard = ({ hotNews, handleClick }) => {
   return (
-    <Button sx={{ width: '100%' }} onClick={() => handleClick()}>
+    <Button sx={{ width: '100%' }} onClick={() => handleClick(hotNews.id)}>
       <Card sx={{
         borderRadius: '4px',
         boxShadow: 'none',
@@ -29,7 +29,7 @@ export const NewsHeroCard = ({ hotNews, handleClick }) => {
             component="img"
             height="400"
             image={hotNews.url}
-            alt="JoJo"
+            alt="news image"
             sx={{
               borderRadius: '8px',
               position: 'absolute',

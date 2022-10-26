@@ -24,8 +24,8 @@ export const NewsList = () => {
   }, []);
 
 
-  const toDetail = () => {
-    navigate('/news/detail')
+  const toDetail = (newsId) => {
+    navigate(`/news/${newsId}`)
   }
 
 
@@ -35,7 +35,6 @@ export const NewsList = () => {
     <section className="news-list" style={{ padding: '30px 0' }}>
       <Typography variant="h2" mt={2} sx={{ fontSize: '32px', mb: 2 }}>Latest News</Typography>
       <Grid container spacing={2}>
-
         {newsDatas.map((newsData) => (
           <Grid xs={3}>
             <NewsCard key={newsData.judul} newsData={newsData} handleClick={toDetail} />

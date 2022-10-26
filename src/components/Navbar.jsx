@@ -49,6 +49,8 @@ export const Navbar = () => {
         <Box sx={{ width: 400, height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center', flexDirection: 'column', fontSize: '28px' }}>
           <NavLink to='/' className={({ isActive }) => isActive ? 'nav-active' : 'nav-inactive'} end>Home</NavLink>
           <NavLink to='/news' className={({ isActive }) => isActive ? 'nav-active' : 'nav-inactive'}>News</NavLink>
+          <NavLink to='/login' className={({ isActive }) => isActive ? 'nav-active' : 'nav-inactive'}>Login</NavLink>
+          <NavLink to='/register' className={({ isActive }) => isActive ? 'nav-active' : 'nav-inactive'}>Register</NavLink>
         </Box>
       </Drawer>
     </>
