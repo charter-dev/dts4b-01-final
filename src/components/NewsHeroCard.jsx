@@ -2,7 +2,7 @@ import React from 'react'
 import { Card, CardContent, Typography, CardMedia, Paper, Button } from '@mui/material'
 
 
-export const NewsHeroCard = ({ handleClick }) => {
+export const NewsHeroCard = ({ hotNews, handleClick }) => {
   return (
     <Button sx={{ width: '100%' }} onClick={() => handleClick()}>
       <Card sx={{
@@ -28,7 +28,7 @@ export const NewsHeroCard = ({ handleClick }) => {
           <CardMedia
             component="img"
             height="400"
-            image="https://www.arealme.com/cover-images/which-jojo-character-are-you.png"
+            image={hotNews.url}
             alt="JoJo"
             sx={{
               borderRadius: '8px',
@@ -41,10 +41,10 @@ export const NewsHeroCard = ({ handleClick }) => {
         </Paper>
         <CardContent sx={{ color: '#fff', textAlign: 'left', maxWidth: 350, padding: '30px', position: 'absolute', bottom: 0, zIndex: 2 }}>
           <Typography variant="h3" sx={{ fontSize: 24, mb: '32px', lineHeight: '40px', fontFamily: "'Playfair Display', serif" }} gutterBottom>
-            Massa tortor nibh nulla condimentum imperdiet scelerisque...
+          {hotNews.judul}
           </Typography>
           <Typography variant="body2" sx={{ fontSize: 12 }}>
-            1 Hour Ago | CNN Indonesia
+          {hotNews.createdAt}
           </Typography>
         </CardContent>
       </Card>
